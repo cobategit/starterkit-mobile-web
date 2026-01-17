@@ -3,7 +3,7 @@ import { type JSX } from "react";
 
 export default function Hero(): JSX.Element {
   return (
-    <section className="bg-sky-50">
+    <section className="bg-sky-500 pt-10">
       <div className="px-4 pt-6 pb-4 text-center">
         <h1 className="text-xl font-extrabold text-sky-700">
           Asisten Kebaikan di Aplikasi

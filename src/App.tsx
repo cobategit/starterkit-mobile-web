@@ -1,6 +1,7 @@
-import type { JSX } from "react";
-import { Home } from "./pages/ui";
+import { type JSX } from "react";
+import { RouterProvider } from "react-router";
+import { router } from "./app/router/router";
 
 export default function App(): JSX.Element {
-  return <Home />;
+  return <RouterProvider router={router} />;
 }
