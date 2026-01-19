@@ -1,6 +1,7 @@
-# VIBE CODING
+# Vibe Coding
+“This is a base project for a React JS mobile-web app. I’m basically putting what’s in my head into code—everything I know about the tech used in this project. I built almost the whole thing using AI tools like ChatGPT, so have fun coding!”
 
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Tailwindcss 4
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router";
+import { useNavigateWithLoading } from "../../../shared";
 
 type StickySearchHeaderProps = {
   solid: boolean;
@@ -28,21 +28,23 @@ function SearchIcon(): React.JSX.Element {
 export default function DirectToSearchPage({
   solid,
   value,
-  placeholder = 'Coba cari "Tolong menolong"',
+  placeholder = "",
   to = "/search",
   query,
 }: StickySearchHeaderProps): React.JSX.Element {
-  const navigate = useNavigate();
+  const navigate = useNavigateWithLoading();
 
   const displayText = value && value.trim().length > 0 ? value : placeholder;
 
   const handleClick = () => {
     const q = (query ?? value)?.trim();
     if (q && q.length > 0) {
-      navigate(`${to}?q=${encodeURIComponent(q)}`);
+      navigate(`${to}?q=${encodeURIComponent(q)}`, {
+        loading: { message: "Membuka Search..." },
+      });
       return;
     }
-    navigate(to);
+    navigate(to, { loading: { message: "Membuka Search..." } });
   };
 
   return (
@@ -58,8 +60,8 @@ export default function DirectToSearchPage({
           type="button"
           onClick={handleClick}
           className={[
-            "flex w-full items-center justify-between rounded-full",
-            "border border-white/40 bg-white/90 px-5 text-sm",
+            "flex w-full h-7 items-center justify-between rounded-full",
+            "border border-white/40 bg-white/90 px-4 mx-7 text-sm",
             "backdrop-blur",
             solid ? "shadow-md" : "shadow-sm",
             "hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/70",

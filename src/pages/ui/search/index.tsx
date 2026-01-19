@@ -1,6 +1,5 @@
 import { useState, type JSX } from "react";
 import {
-  BottomNav,
   DownloadCta,
   Hero,
   // MobileShell,
@@ -20,7 +19,7 @@ export default function SearchPage(): JSX.Element {
         onChange={(e) => setQ(e.target.value)}
         onBack={() => history.back()}
       />
-      <main className="px-0 pt-12 pb-10">
+      <main className="px-0 mt-0">
         <Hero />
         <DownloadCta />
         <QuickActions />
@@ -28,7 +27,7 @@ export default function SearchPage(): JSX.Element {
       </main>
       {/* </MobileShell> */}
 
-      <BottomNav />
+      {/* <BottomNav /> */}
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { useScrolledPast } from "../../../hooks/useScrolledPast";
 import {
-  BottomNav,
   UrgentCampaigns,
   QuickActions,
   DownloadCta,
@@ -16,8 +15,8 @@ export default function HomePage(): JSX.Element {
   return (
     <>
       {/* <MobileShell> */}
-      <DirectToSearchPage solid={solidHeader} />
-      <main className="px-0 mt-0 pb-10">
+      <DirectToSearchPage solid={solidHeader} placeholder="Cari sesuatu..." />
+      <main className="px-0 mt-0">
         <Hero />
         <DownloadCta />
         <QuickActions />
@@ -25,7 +24,7 @@ export default function HomePage(): JSX.Element {
       </main>
       {/* </MobileShell> */}
 
-      <BottomNav />
+      {/* <BottomNav /> */}
     </>
   );
 }
