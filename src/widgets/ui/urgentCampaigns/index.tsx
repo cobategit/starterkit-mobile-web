@@ -16,6 +16,18 @@ const CAMPAIGNS: Campaign[] = [
     collectedAmount: 45_000_000,
     progress: 0.33,
   },
+  {
+    id: "c3",
+    title: "Contoh Campaign: Bantuan pendidikan",
+    collectedAmount: 45_000_000,
+    progress: 0.33,
+  },
+  {
+    id: "c4",
+    title: "Contoh Campaign: Bantuan pendidikan",
+    collectedAmount: 45_000_000,
+    progress: 0.33,
+  }
 ];
 
 function clamp01(value: number): number {
